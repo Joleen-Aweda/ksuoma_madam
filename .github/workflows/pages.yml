@@ -31,7 +31,11 @@ jobs:
             --exclude .git/ \
             --exclude .github/ \
             --exclude AGENTS.md \
+            --exclude content/i18n/sw-TZ/audio/ \
             --exclude content/i18n/sw-TZ/video/
+          jq '.features.readAloud = false | .features.autoplay = false' \
+            _site/assets/config.json > _site/assets/config.json.tmp
+          mv _site/assets/config.json.tmp _site/assets/config.json
           touch _site/.nojekyll
 
       - name: Configure Pages
