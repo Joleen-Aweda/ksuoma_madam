@@ -2,88 +2,207 @@
 <html lang="sw-TZ">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kusoma: Kitabu cha Mwanafunzi, Darasa la Kwanza</title>
-  <meta name="title-id" content="pg076_sec001">
-  <meta name="page-section-id" content="87">
-  <link href="./content/tailwind_output.css" rel="stylesheet">
-  <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
-  <link href="./assets/fonts.css" rel="stylesheet">
-  <style>
-    .z-lesson { max-width: 66rem; margin: 0 auto; color: #231f20; }
-    .z-lesson .lesson-prompt { font-size: clamp(1.55rem, 3vw, 2.45rem); line-height: 1.45; }
-    .z-lesson .letter-card { width: 13rem; height: 13rem; border: 2px solid #f47a2a; }
-    .z-lesson .letter-card span { font-size: 9rem; color: #f47a2a; }
-    .z-lesson .exercise-panel { border: 2px solid #d8c7e2; background: #fbf9fd; }
-    .z-lesson .exercise-tab { background: linear-gradient(135deg, #6f3792, #985bc0); }
-    .z-lesson .exercise-instruction { color: #ec008c; font-size: clamp(1.5rem, 3vw, 2.35rem); line-height: 1.35; }
-    .z-lesson .letter-board { border: 1px solid #454545; background: #fff; }
-    .z-lesson .letter-board [data-id] { font-size: clamp(4.5rem, 9vw, 7.5rem); }
-    .z-lesson .body-copy { font-size: clamp(1.35rem, 2.45vw, 2rem); line-height: 1.5; }
-    .z-lesson .syllable-list { word-spacing: 2.4rem; font-weight: 700; }
-  </style>
-    <style data-letter-sequence>
-      .letter-sequence { color: #231f20 !important; font-weight: 700 !important; }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kusoma: Kitabu cha Mwanafunzi, Darasa la Kwanza</title>
+    <meta name="title-id" content="pg076_sec001">
+    <meta name="page-section-id" content="76">
+    <link href="./content/tailwind_output.css" rel="stylesheet">
+    <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+        .pg076-page {
+            max-width: 68rem;
+            padding: clamp(2rem, 5vw, 5rem) clamp(1.25rem, 4vw, 4.5rem);
+            color: #231f20;
+        }
+
+        .pg076-intro {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: center;
+            gap: clamp(2rem, 8vw, 8rem);
+            margin-bottom: clamp(3rem, 6vw, 5rem);
+        }
+
+        .pg076-prompt {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-style: italic;
+            line-height: 1.45;
+        }
+
+        .pg076-letter-card {
+            display: grid;
+            width: clamp(10.5rem, 19vw, 13.5rem);
+            height: clamp(10.5rem, 19vw, 13.5rem);
+            place-items: center;
+            border: 1.5px solid #76b947;
+            background: #fff;
+        }
+
+        .pg076-feature-letter {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(7rem, 13vw, 10rem);
+            font-weight: 800;
+            line-height: .8;
+            color: #76b947;
+        }
+
+        .pg076-exercise {
+            position: relative;
+            border: 2px solid #dccbe6;
+            border-radius: 1.6rem;
+            background: #fcfaff;
+            padding: 1.25rem clamp(1rem, 3vw, 2.85rem) clamp(2rem, 4vw, 3rem);
+            box-shadow: 0 1px 3px rgb(81 47 115 / 8%);
+        }
+
+        .pg076-tab {
+            position: absolute;
+            top: -1.45rem;
+            left: -.8rem;
+            border-radius: .2rem 1.5rem 1.5rem .2rem;
+            padding: .35rem 1.25rem .48rem;
+            background: linear-gradient(180deg, #9c62bd 0%, #6f388c 100%);
+            box-shadow: inset 0 1px 1px rgb(255 255 255 / 35%), 0 2px 3px rgb(58 28 79 / 22%);
+            color: #fff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.55rem, 3.5vw, 2.35rem);
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .pg076-content {
+            padding-top: 1.7rem;
+        }
+
+        .pg076-block + .pg076-block {
+            margin-top: 1.75rem;
+        }
+
+        .pg076-instruction {
+            margin: 0 0 .75rem;
+            color: #ec008c;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .pg076-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1.75rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem);
+            margin: .9rem 0 1.65rem;
+            padding: clamp(1.5rem, 4vw, 2.7rem);
+            border: 1.5px solid #56515a;
+            background: #fcfaff;
+        }
+
+        .pg076-board-letter {
+            text-align: center;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(4.25rem, 8vw, 6.6rem);
+            font-weight: 800;
+            line-height: .82;
+        }
+
+        .pg076-word-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem 2.4rem;
+            margin: .25rem 0 1rem 2.6rem;
+            color: #231f20;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.4rem, 2.6vw, 2rem);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .pg076-example-heading {
+            margin: .1rem 0 .3rem 2.6rem;
+            color: #231f20;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.45rem, 2.7vw, 2rem);
+            font-weight: 800;
+        }
+
+        .pg076-copy {
+            margin: .2rem 0 0 2.6rem;
+            color: #231f20;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.3rem, 2.45vw, 1.82rem);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 640px) {
+            .pg076-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+            .pg076-letter-card { justify-self: end; }
+            .pg076-exercise { border-radius: 1rem; }
+            .pg076-tab { left: 0; }
+            .pg076-word-row, .pg076-example-heading, .pg076-copy { margin-left: 1.65rem; }
+            .pg076-board { gap: 1.5rem; padding: 1.25rem .8rem; }
+        }
     </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
-  <main class="w-full">
-    <div id="content" class="container opacity-0">
-      <section data-section-type="boxed_text" data-section-id="pg076_sec001" class="z-lesson mx-auto w-full px-8 max-sm:px-5 py-10 bg-white text-zinc-800">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-          <div class="space-y-4">
-            <p data-id="pg076_n0002" class="lesson-prompt text-left italic">Tazama/ chunguza herufi hii:</p>
-            <p data-id="pg076_n0003" class="lesson-prompt text-left italic">Tamka sauti ya herufi hii/ bainisha kwa tahajia za vidole herufi hii:</p>
-          </div>
-          <div class="letter-card bg-white flex items-center justify-center shrink-0" aria-label="Herufi z"><span class="font-bold leading-none" aria-hidden="true">Z</span><span class="sr-only" data-id="pg076_n0005">z</span></div>
-        </div>
-
-        <div class="exercise-panel mt-8 rounded-2xl p-6 max-sm:p-4 relative space-y-6">
-          <div class="exercise-tab inline-block -mt-12 mb-1 rounded-r-2xl rounded-l-none px-5 py-2 shadow-md">
-            <h1 data-id="pg076_n0008" class="adt-h2 text-left font-bold text-white">Zoezi la tatu</h1>
-          </div>
-
-          <p data-id="pg076_n0009" class="exercise-instruction text-left">1. Onesha na tamka sauti ya herufi z/ onesha na bainisha kwa kutumia tahajia za vidole herufi z.</p>
-
-          <div class="letter-board p-8 max-sm:p-4">
-            <div class="grid grid-cols-4 gap-y-6 gap-x-8 items-center justify-items-center max-sm:gap-4">
-              <div data-id="pg076_n0011" class="adt-h1 font-black text-zinc-900 leading-none">Z</div>
-              <div data-id="pg076_n0012" class="adt-h1 font-black text-purple-600 leading-none">m</div>
-              <div data-id="pg076_n0013" class="adt-h1 font-black text-blue-800 leading-none">k</div>
-              <div data-id="pg076_n0014" class="adt-h1 font-black text-sky-400 leading-none">z</div>
-              <div data-id="pg076_n0015" class="adt-h1 font-black text-blue-800 leading-none">b</div>
-              <div data-id="pg076_n0016" class="adt-h1 font-black text-green-500 leading-none">z</div>
-              <div data-id="pg076_n0017" class="adt-h1 font-black text-purple-700 leading-none">p</div>
-              <div data-id="pg076_n0018" class="adt-h1 font-black text-zinc-900 leading-none">u</div>
-            </div>
-          </div>
-
-          <p data-id="pg076_n0020" class="sr-only">2. Unda silabi kwa kuunganisha herufi z na a e i o u.</p><p class="exercise-instruction text-left" aria-hidden="true">2. Unda silabi kwa kuunganisha herufi <strong class="letter-sequence">z na a e i o u.</strong></p>
-          <div data-id="pg076_n0021" class="body-copy text-left font-bold text-zinc-900">Mifano</div>
-          <div class="body-copy text-left text-zinc-800 space-y-2"><p data-id="pg076_n0023">Herufi z na a zinaunda silabi za.</p><p data-id="pg076_n0024">Herufi z na e zinaunda silabi ze.</p></div>
-
-          <p data-id="pg076_n0026" class="exercise-instruction text-left">3. Tenganisha herufi zinazounda silabi hizi kwa kutamka/ kwa kutumia tahajia za vidole:</p>
-          <div class="body-copy syllable-list text-left text-zinc-900 flex flex-wrap gap-x-12 gap-y-2 max-sm:gap-x-8">
-            <span data-id="pg076_n0028">zi</span>
-            <span data-id="pg076_n0029">zu</span>
-            <span data-id="pg076_n0030">zo</span>
-            <span data-id="pg076_n0031">ze</span>
-            <span data-id="pg076_n0032">za</span>
-          </div>
-          <div data-id="pg076_n0033" class="body-copy text-left font-bold text-zinc-900">Mifano</div>
-          <div class="body-copy text-left text-zinc-800 space-y-2"><p data-id="pg076_n0035">Herufi zinazounda silabi zi ni z i.</p><p data-id="pg076_n0036">Herufi zinazounda silabi zu ni z u.</p></div>
-        </div>
-      </section>
+    <main class="w-full">
+      <h1 class="sr-only" id="page-heading">Zoezi la kwanza</h1>
+      <div id="content" class="container opacity-0"><section data-section-type="boxed_text" data-section-id="pg076_sec001" class="pg076-page mx-auto w-full bg-white">
+  <div class="pg076-intro">
+    <div>
+      <p class="pg076-prompt"><span data-id="pg076_n0002">Tazama/ chunguza herufi hii:</span></p>
+      <p class="pg076-prompt"><span data-id="pg076_n0003">Tamka sauti ya herufi hii/ bainisha kwa tahajia za vidole herufi hii:</span></p>
     </div>
-  </main>
+    <div class="pg076-letter-card"><div data-id="pg076_n0004" class="pg076-feature-letter">r</div></div>
+  </div>
 
-  <div class="relative z-50" id="interface-container"></div>
-  <div class="relative z-50" id="nav-container"></div>
-  <script src="./assets/offline-preloader.js?v=22"></script>
-  <script src="./assets/scorm.js"></script>
-  <script src="./assets/base.bundle.local.js"></script>
+  <div class="pg076-exercise">
+    <div data-id="pg076_n0007" class="pg076-tab">Zoezi la kwanza</div>
+    <div class="pg076-content">
+      <div class="pg076-block">
+        <p class="pg076-instruction"><span data-id="pg076_n0009">1. Onesha na tamka sauti ya herufi r/ onesha na bainisha kwa kutumia tahajia za vidole herufi r.</span></p>
+        <div class="pg076-board">
+          <div data-id="pg076_n0010" class="pg076-board-letter text-neutral-900">r</div>
+          <div data-id="pg076_n0011" class="pg076-board-letter text-purple-700">h</div>
+          <div data-id="pg076_n0012" class="pg076-board-letter text-blue-800">e</div>
+          <div data-id="pg076_n0013" class="pg076-board-letter text-orange-500">r</div>
+          <div data-id="pg076_n0014" class="pg076-board-letter text-sky-500">l</div>
+          <div data-id="pg076_n0015" class="pg076-board-letter text-green-500">r</div>
+          <div data-id="pg076_n0016" class="pg076-board-letter text-blue-800">i</div>
+          <div data-id="pg076_n0017" class="pg076-board-letter text-neutral-900">k</div>
+        </div>
+      </div>
+
+      <div class="pg076-block">
+        <p class="pg076-instruction"><span data-id="pg076_n0019">2. Unda silabi kwa kuunganisha herufi r na a</span></p>
+        <div class="pg076-word-row"><span data-id="pg076_n0020">e</span><span data-id="pg076_n0021">i</span><span data-id="pg076_n0022">o</span><span data-id="pg076_n0023">u</span></div>
+        <div data-id="pg076_n0025" class="pg076-example-heading">Mifano</div>
+        <p class="pg076-copy"><span data-id="pg076_n0026">Herufi r na a zinaunda silabi ra.</span></p>
+        <p class="pg076-copy"><span data-id="pg076_n0027">Herufi r na e zinaunda silabi re.</span></p>
+      </div>
+
+      <div class="pg076-block">
+        <p class="pg076-instruction"><span data-id="pg076_n0029">3. Tenganisha herufi zinazounda silabi hizi kwa kutamka/ kwa kutumia tahajia za vidole:</span></p>
+        <div class="pg076-word-row"><span data-id="pg076_n0030">ri</span><span data-id="pg076_n0031">ru</span><span data-id="pg076_n0032">ro</span><span data-id="pg076_n0033">ra</span><span data-id="pg076_n0034">re</span></div>
+        <div data-id="pg076_n0036" class="pg076-example-heading">Mifano</div>
+        <p class="pg076-copy"><span data-id="pg076_n0037">Herufi zinazounda silabi ri ni r i.</span></p>
+        <p class="pg076-copy"><span data-id="pg076_n0038">Herufi zinazounda silabi ru ni r u.</span></p>
+      </div>
+    </div>
+  </div>
+</section></div>
+    </main>
+
+    <div class="relative z-50" id="interface-container"></div>
+    <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/offline-preloader.js?v=22"></script>
+    <script src="./assets/scorm.js"></script>
+    <script src="./assets/base.bundle.local.js"></script>
 </body>
 
 </html>
