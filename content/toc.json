@@ -1,7 +1,13 @@
 [
   {
-    "section_id": "pg001_sec001",
+    "section_id": "cover_sec001",
     "href": "index.html",
+    "title": "Jalada la mbele",
+    "level": 1
+  },
+  {
+    "section_id": "pg001_sec001",
+    "href": "pg001_sec001.html",
     "title": "Kusoma",
     "chapter_id": "pg001_n0002",
     "level": 1
@@ -733,5 +739,11 @@
     "title": "Zoezi la sita",
     "chapter_id": "pg129_n0003",
     "level": 2
+  },
+  {
+    "section_id": "back_cover_sec001",
+    "href": "back-cover.html",
+    "title": "Jalada la nyuma",
+    "level": 1
   }
 ]
