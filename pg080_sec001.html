@@ -30,6 +30,7 @@
     .pg080-word-row { display: flex; flex-wrap: wrap; gap: .5rem 2.4rem; margin: .25rem 0 1rem 2.6rem; color: #231f20; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; line-height: 1.2; }
     @media (max-width: 640px) { .pg080-intro { grid-template-columns: 1fr; gap: 1.5rem; } .pg080-letter-card { justify-self: end; } .pg080-exercise { border-radius: 1rem; } .pg080-tab { left: 0; } .pg080-board { gap: 1.5rem; padding: 1.25rem .8rem; } .pg080-word-row, .pg080-example-heading, .pg080-copy { margin-left: 1.65rem; } }
   </style>
+<link rel="stylesheet" href="./assets/sign-language-video.css">
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -64,10 +65,12 @@
 
   <div class="relative z-50" id="interface-container"></div>
   <div class="relative z-50" id="nav-container"></div>
-  <script src="./assets/offline-preloader.js?v=49"></script>
+  <script src="./assets/offline-preloader.js?v=33"></script>
   <script src="./assets/scorm.js"></script>
   <script src="./assets/sign-language-muted.js?v=3"></script>
-  <script src="./assets/base.bundle.local.js"></script>
+  <script src="./assets/media-playback-independence.js"></script>
+<script src="./assets/base.bundle.local.js?v=33"></script>
+<script src="./assets/sign-language-video.js"></script>
 </body>
 
 </html>
