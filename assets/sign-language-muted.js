@@ -3,19 +3,8 @@
 
   function muteSignLanguageVideo(video) {
     var source = video.getAttribute("src") || video.currentSrc || "";
-    var remoteStart = source.indexOf("https://");
-
-    // The bundled runtime normally prefixes mapped filenames with the local
-    // video directory. Remove that prefix when videos.json supplies a fully
-    // qualified GitHub Release URL.
-    if (remoteStart > 0) {
-      source = source.slice(remoteStart);
-      video.setAttribute("src", source);
-    }
-
     var isLocalSignVideo = source.includes("/content/i18n/") && source.includes("/video/");
-    var isReleaseSignVideo = source.includes("/releases/download/sign-language-v1/");
-    if (!isLocalSignVideo && !isReleaseSignVideo) return false;
+    if (!isLocalSignVideo) return false;
 
     video.defaultMuted = true;
     video.muted = true;
